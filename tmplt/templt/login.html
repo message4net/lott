@@ -11,15 +11,18 @@ background-color: #333373;
 overflow:hidden;
 }
 
-.backGroundImg{ background-image:url(/images/loginBackground2.jpg); width:756px; height:268px; overflow:hidden; position:absolute; left:0px; top:0px; }
+.backGroundImg{ background-image:url({base_http_url}image/loginBackground2.jpg); width:756px; height:268px; overflow:hidden; position:absolute; left:0px; top:0px; }
 .logintable{font-size: 12px; margin-top: 80px; margin-left: 410px; height:150px; font-family:微软雅黑; text-align:left}
 #checkCode{width: 40px; text-align:center; background-color:#fff; font-size:12px;height:22px; line-height:22px; display:block;box-shadow:2px 2px 0px #eeebef;}
 .textBox{ height:22px; line-height:22px; width:260px; border:1px solid #ccc ;box-shadow:2px 2px 0px #eeebef;}
+<!--
 .loginBut{ width:95px; height:35px; line-height:35px; font-family:微软雅黑;  font-size:14px; border:0px; cursor:pointer;background-image:url(/images/bak-but.png) }
+-->
+.loginBut{ width:95px; height:35px; line-height:35px; font-family:微软雅黑;  font-size:14px; border:0px; cursor:pointer }
 
 </style>
-<script type="text/javascript" language="javascript" src="../script/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" language="javascript" src="../script/login.js"></script>
+<script type="text/javascript" language="javascript" src="{base_http_url}script/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" language="javascript" src="{base_http_url}script/login.js"></script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
@@ -51,7 +54,7 @@ overflow:hidden;
                     <tr style="text-align:center">
                         <td colspan="3" style="text-align:right">
                             <input type="button" value="取消" class="loginBut" onclick="document.all.txtMember.value='';document.all.txtPWS.value='';return false;" id="BtnEsc" name="Image1">
-                            <input type="button" value="登录" class="loginBut" style="margin-left:60px" id="btnLogin" onclick="Login();" name="btnLogin">
+                            <input type="button" value="登录" class="loginBut" style="margin-left:60px" id="btnLogin" name="btnLogin">
                         </td>
                     </tr>
                 </tbody></table>
