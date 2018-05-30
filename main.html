@@ -1,0 +1,314 @@
+<html style="background-color: rgb(176, 219, 228);"><head>
+		<title>会员</title>
+        <style>
+            html,body
+            {
+                
+            }
+            
+            body
+            {
+                overflow-x:auto;
+            }
+                
+           .totalContainer
+           {
+                overflow: hidden;
+                /* overflow-x: auto; */
+                min-width: 1300px;
+                position: relative;
+                height: 500px;
+            }
+
+            .bw-content{
+                overflow: hidden;
+                position: absolute;
+                min-height: 200px;
+                min-width: 200px;
+                background-color: #fff;
+                z-index: 11;
+                box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+                -moz-user-select:none;
+                -webkit-user-select:none;
+                user-select:none;  
+                border: 1px solid #9b93d6;
+            }
+
+            .bw-title{
+                overflow: hidden;
+                background-color: #9b93d6;
+                color:#fff;
+                height:35px;
+                line-height: 35px;
+                padding-left: 10px;
+                cursor: move;
+            }
+
+            .bw-title span{
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            .bw-close{
+                font-size: 14px;
+                color:#e4ff00;
+                text-decoration-style:none;
+                margin-right:8px; 
+                position: absolute;
+                top:0px;
+                left:0px;
+                z-index: 12;
+                cursor: pointer;
+            }
+            .bw-se{
+                top:-100px;
+                left:-100px;
+                position: absolute;
+                z-index: 12;
+                background-color: #000;
+                opacity: 0;
+                filter:alpha(opacity=0);
+                -moz-user-select:none;
+                -webkit-user-select:none;
+                user-select:none; 
+            }
+
+            .longResult table{
+                width:350px;
+                border-top: 1px solid #888;
+                border-left: 1px solid #888;
+                font-size: 16px
+            }
+
+            .longResult table thead tr th{
+                border-bottom: 1px solid #888;
+                border-right: 1px solid #888;
+                height: 30px;
+                width: 25%;
+                background-color: #f3e5bd;
+                font-size: 14px
+            }
+            .longResult table tbody tr td{
+                 border-bottom: 1px solid #888;
+                border-right: 1px solid #888;
+                text-indent: 10px;
+                height:28px;
+                font-size: 14px
+            }
+        </style>
+<!--         
+        <link href="Scripts/Zebra_Dialog/public/css/zebra_dialog.css" rel="stylesheet" type="text/css">
+        <script src="Scripts/Zebra_Dialog/public/jquery-1.6.2.js" type="text/javascript"></script>
+        <script src="Scripts/mouseController.js" type="text/javascript"></script>
+        <script src="Scripts/bWindow.js" type="text/javascript"></script>
+        <script src="Scripts/Zebra_Dialog/public/javascript/zebra_dialog.src.js" type="text/javascript"></script>
+ -->
+        <script>
+                window.isCloseGame = false;
+//            jQuery(document).ready(function(){
+//                resizeWindow();
+//            });
+
+//            jQuery(window).resize(function(){
+//                resizeWindow();
+//            }); 
+
+            //长龙数据
+            window.longResultData = "";
+
+            //结果
+            window.longResultRData = "";
+
+            //标题
+            window.longTitle = "";
+
+            var getLongContent = function(){
+                var long = jQuery("<div class='longResult'>"
+                                  +"      <table  cellspacing='0' cellpadding='0' border='0' >"
+                                  +"          <thead>"
+                                  +"              <tr>"
+                                  +"                  <th>球号</th>"
+                                  +"                  <th>大小</th>"
+                                  +"                  <th>期数</th>"
+                                  +"                  <th>结果</th>"
+                                  +"              </tr>"
+                                  +"          </thead>"
+                                  +"          <tbody data-name='rData' >"
+                                  +"          </tbody>"
+                                  +"      </table>"
+                                  +"  </div>");
+
+                jQuery('[data-name=rData]').empty();
+                var count = window.longResultRData.split('|').length;
+                var limit = 10;
+                if(count > limit){
+                    count = limit;
+                }
+                for(var i=0;i<count;i++){
+                    if(typeof( window.longResultData.split('@')[i]) === 'undefined' || window.longResultData.split('@')[i] === ''){
+                        var row = ["&nbsp;","&nbsp;","&nbsp;"];
+                    }else{
+                        var row = window.longResultData.split('@')[i].split('#');
+                    }
+                    var r = jQuery("<tr></tr>").appendTo(long.find('[data-name=rData]'));
+                    for(var j=0;j<row.length;j++){
+                        var item = row[j];
+                        if(j===2){
+                            jQuery('<td  style="color:#ff0000;" >'+ item +'</td>').appendTo(r);
+                        }else{
+                            jQuery('<td>'+ item +'</td>').appendTo(r);
+                        }
+                    }
+                    jQuery('<td><div style="font-weight: bold;color:#ff0000;"  >'+ window.longResultRData.split('|')[i].replace(/\#/g,'&nbsp;') +'</div></td>').appendTo(r);
+                }
+
+                return long;
+            }
+
+            var refreshRwindow = function(){
+                if( typeof window.bWindow === 'undefined'){
+                    return;
+                }
+
+                var long = getLongContent();
+                window.bWindow.wContent.remove();
+                window.bWindow.wContent = long;
+                window.bWindow.config.data = long;
+                long.appendTo(window.bWindow.content);
+                window.bWindow.title.find('.bw-t-content').html(window.longTitle);
+            }
+
+            var openRWindow = function(){
+
+                if(window.longResultRData === ""){
+                    return;
+                }
+
+                if( typeof window.bWindow !== 'undefined'){
+                    return;
+                }
+
+                
+                var long = getLongContent();
+
+                window.bWindow = new _bWindow({
+                    data:long,
+                    title:window.longTitle,
+                    closeCall:function(){
+                        window.bWindow = undefined;
+                    }
+                });
+                window.bWindow.open();
+            }
+
+            var resizeWindow = function () {
+                jQuery('.totalContainer').css('height',jQuery(window).height()+'px')
+            }
+
+            function showHlsMesg(msg) {
+                $.Zebra_Dialog(msg, {
+                    'title': '系统信息',
+                    'buttons': ['确定'],
+                    'onClose': function (caption) { }
+                });
+            }
+
+            var dialog;
+            function ShowDialog(msg) {
+                if (dialog) {
+                    dialog.message = msg;
+                    dialog.setmessage();
+                }
+                else {
+                    dialog = $.Zebra_Dialog(msg);
+                }
+            }
+
+            function CloseDialog() {
+                if (dialog) {
+                    dialog.close();
+                    dialog = null;
+                }
+            }
+
+//            $(document).ready(function () {
+//               // $('[name=TopFrame]').load(function () {
+//               //     document.title = window.frames["TopFrame"].window.document.title;
+//               // })
+//               //
+//               // resizeFrame();
+//
+//                
+//                
+//                jQuery('#LeftFrame').load(function(){
+//                    jQuery('#LeftFrame').unbind('load');
+//                    //jQuery('#TopFrame').attr('src','top.aspx');
+//                    jQuery('#MainFrame').attr('src','KDIndex.htm');
+//                });
+//                jQuery('#LeftFrame').attr('src','left.aspx');
+//
+//                //判断是否有背景颜色保存
+//                if (getCookie("BackColor")) {
+//                    var color = getCookie("BackColor");
+//                    document.body.style.backgroundColor = color;
+//                    document.documentElement.style.backgroundColor = color;
+//                } else {
+//                    document.body.style.backgroundColor = "#4bc6e3";
+//                    document.documentElement.style.backgroundColor = "#4bc6e3";
+//                }
+//
+//            });
+
+//            $(window).resize(function () {
+//                resizeFrame();
+//            });
+
+            var resizeFrame = function () {
+                //var topHeight = $('[name=TopFrame]').height();
+                var tempHeight = $(window).height() - topHeight;
+                $('[name=LeftFrame]').height(tempHeight);
+                $('[name=MainFrame]').height(tempHeight);
+            }
+
+            function getCookie(name)//取cookies函数   
+            {
+                var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+                if (arr != null) return unescape(arr[2]); return null;
+            }
+        </script>
+
+	</head>
+ <body style="margin: 0px; background-color: rgb(176, 219, 228);">
+ <div class="totalContainer" style="height: 752px;">
+<div style="position: absolute;top: 0px;left: 0px; z-index: 2;height: 96px;width: 100%;    min-width: 1024px;">
+        <iframe name="TopFrame" id="TopFrame" scrolling="no" noresize="" target="main" width="100%" height="96" allowtransparency="true" frameborder="0" src="top.html">
+ 
+        
+        
+        
+        </iframe>
+        </div>
+        
+<div style="position: absolute;top: 96px;left: 0px; z-index: 2;height: 100%;width: 100%;">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed;">
+            <tbody><tr>
+                <td style="width:206px">
+                <!-- 
+                    <iframe name="LeftFrame" id="LeftFrame" allowtransparency="true" target="main" src="left.aspx" scrolling="no" noresize="" width="100%" height="100%" frameborder="0" style="height: 656px;">
+                  -->
+                    <iframe name="LeftFrame" id="LeftFrame" allowtransparency="true" target="main" src="left.html" scrolling="no" noresize="" width="100%" height="100%" frameborder="0" style="height: 656px;">
+              
+                    </iframe>
+                </td>
+                <td>
+                    <iframe name="MainFrame" id="MainFrame" allowtransparency="true" scrolling="auto" noresize="" width="100%" height="100%" frameborder="0" src="KDIndex.html" style="height: 656px;">
+
+                    </iframe>
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+</div>
+    
+
+</body></html>

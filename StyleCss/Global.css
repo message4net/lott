@@ -1,0 +1,186 @@
+body,html,div,li,ul,a,p,form,img,input { margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;  -webkit-text-size-adjust:none; }
+body,html { font-size:12px; font-family:宋体; background-color:#4BC6E3;  height:100%;  -webkit-transition:background 1s linear;transition:background 1s linear;
+            }
+img{margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;  border:0px; display:block}
+.clearFix{ clear:both; overflow:hidden; font-size:0px; height:0px; width:0px}
+a{ text-decoration:none; color:#fff; cursor:pointer;margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;}
+form{ display:block; width:100%; text-align:center; _overflow:hidden;}
+
+input[type=text]{outline: none;height:22px; font-family:微软雅黑; font-size:12px; line-height:22px; box-shadow:0px 0px 2px #fff; font-family:微软雅黑; display:block; background-image:url(/images/newimages/right/textShader.png); background-repeat:repeat-x; background-position:top; border:1px solid #686767; margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; color:#3f3f3f;-webkit-transition: color .1s linear, border .1s linear , box-shadow .1s linear .1s;transition: color .1s linear, border .1s linear , box-shadow .1s linear .1s}
+input[type=password]{outline: none;height:22px; font-family:微软雅黑; font-size:12px; line-height:22px;box-shadow:0px 0px 2px #fff;   display:block; background-image:url(/images/newimages/right/textShader.png); background-repeat:repeat-x; background-position:top; border:1px solid #686767; margin:0px 0px 0px 0px; padding:0px 0px 0px 0px }
+input[type=text]:hover{outline: none; border:1px solid #343434; box-shadow:0px 0px 5px #fff; color:#343434;-webkit-transition: color .1s linear, border .1s linear , box-shadow .1s linear .1s;transition: color .1s linear, border .1s linear , box-shadow .1s linear .1s }
+
+
+/*按钮*/
+.Ebutton{display:inline-block; background:#AAAAAA;color:#313131; font-size:12px; cursor:pointer; height:25px; line-height:25px; padding: 0px 8px 0px 8px; border:0px }
+.Ebutton:hover{text-decoration:underline; background:#e3cd4a;  -webkit-transition: border .1s linear, text-decoration .1s linear;transition: border .1s linear, text-decoration .1s linear; }
+.Ebutton:active{color:#000;background:#AAAAAA; text-shadow:0px 0px 5px #fff;box-shadow:0px 0px 5px #fff inset;}
+
+/*列表*/
+.Wasabi_List{font-size:12px; width:97%;  background-color:transparent; background-image:url(/images/Black/g.png); border-radius: 5px 5px 5px 5px; margin:6px auto 0px auto ;
+             _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src='/images/Black/g.png'); /* IE6 */ _background-image:none;
+             } 
+.Wasabi_List .LTitle{ color:#fff; font-family:黑体; font-size:22px; height:34px;background-color:transparent; background-image:url(/images/NewCustomerImages/wListTitleBack.png); 
+             _background-color:#343434; _background-image:none;
+             }
+.Wasabi_List .LTitle td{text-align:left;padding-left:4px; border-radius: 5px 5px 0px 0px; }
+.Wasabi_List .Lcontent{background-color:transparent; pixelWidth:50%}
+.Wasabi_List .Lcontent tr{  color:#eee; height:25px; cursor:pointer; text-align:left; font-size:15px;-webkit-transition: color .1s linear, background-color .1s linear .1s; transition: color .1s linear, background-color .1s linear .1s;}
+.Wasabi_List .Lcontent .alt-row{ }
+.Wasabi_List .Lcontent tr td{ padding-left:4px;overflow:hidden;background-image:url(/images/NewCustomerImages/listItemBack.png); background-position:bottom; background-repeat:repeat-x; _background-image:none; _border-bottom:1px solid #b1b1b1}
+.Wasabi_List .Lcontent tr td div{ display:block; overflow:hidden;height:14px; width:100%;}
+.Wasabi_List .Lcontent tr:hover{color:#fff;text-shadow:0px 0px 5px #000;  -webkit-transition: color .1s linear, background-color .1s linear .1s; transition: color .1s linear, background-color .1s linear .1s;}
+.Wasabi_List .Lcontent tr:hover td div a{  color:#fff;  -webkit-transition: color .1s linear; transition: color .1s linear;}
+.Wasabi_List a{color:#fff;margin-left:5px; margin-right:5px;}
+
+/*下注表用样式*/
+.myTableStyle{ white-space:nowrap ;width:100%; border-top:1px solid #ababab ; border-left:1px solid #ababab; background-image:url(/images/white/g.png);_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src='/images/white/g.png'); /* IE6 */ _background-image:none;                 }
+.myTableStyle tr td{border-bottom:1px solid #ababab ; border-right:1px solid #ababab; font-size:12px; color:#272727; padding:2px}
+.myTableStyle tr th{border-bottom:1px solid #ababab ; border-right:1px solid #ababab; font-size:12px; color:#272727; padding:2px}
+/*以下样式为默认表头样式*/
+.myTableStyle thead tr td{background-image:url(/images/newimages/right/BetListBack.png); height:25px; font-size:12px; color:#454545; font-weight:bold; white-space:nowrap}
+.myTableStyle tbody tr{ height:22px; } 
+.myTableStyle thead input[type=button]{ padding:3px 15px 3px 15px ;overflow:hidden}
+.myTableStyle thead input[type=submit]{ padding:3px 15px 3px 15px;overflow:hidden }
+/*以下样式在高亮显示某个格子时使用*/
+.myTableStyle .grayBack{ background-image:url(/images/white/g.png); }
+/*以下样式在长龙排行中显示期数*/
+.myTableStyle .dataDisplay{width:30px; text-align:center; color:#515252}
+/*以下样式为.myTableStyle中的文本框样式*/
+.myTableStyle .tboxskin{ margin:0px auto 0px auto; width:60px }
+/*以下样式为纯文本时标识号码的样式*/
+.myTableStyle .textBlue{ color:#2032b7;font-family:Arial Black; }
+.myTableStyle .textRed{ color:#d51313;font-family:Arial Black; }
+
+/*以下样式专门放在ODDS的TD上，配合.onOpen/.onClose样式分别显示开盘/关盘*/
+.myTableStyle .bW{ background-image:url(/images/white/g.png); font-weight:bold;}
+.myTableStyle .onOpen{ font-family:Arial Black; color:#d51313 }
+.myTableStyle .onClose{ color:#686868 }
+
+/*以下样式标识球在.myTableStyle中的样式*/
+.myTableStyle .blueBall{ color:#eee; padding:0px }
+.myTableStyle .redBall{ color:#eee; padding:0px }
+.myTableStyle .greenBall{ color:#eee; padding:0px }
+
+.myTableStyle .a{cursor:pointer}
+.myTableStyle .unChoose{cursor:pointer;}
+.myTableStyle .Choose{cursor:pointer;background-image:url(/images/orange/g.png);}
+
+/*以下样式标识球在.myTableStyle/彩果显示模式中的样式*/
+.myTableStyle .bB{background-image:url(/images/blue/g.png);}
+.myTableStyle .rB{background-image:url(/images/red/g.png);}
+
+/*配合.myTableStyle样式使用，以下样式给.myTableStyle换上黑色的框架*/
+.borderBlack{border-top:1px solid #343434 ; border-left:1px solid #343434;}
+.borderBlack tr td{border-bottom:1px solid #343434 ; border-right:1px solid #343434;}
+.borderBlack tr th{border-bottom:1px solid #343434 ; border-right:1px solid #ababab;}
+
+/*配合.myTableStyle样式使用，以下样式给.myTableStyle的TR鼠标悬浮时换上高亮背景*/
+.trhover tbody tr:hover{  background-image:url(/images/orange/g.png); } 
+.textCenter{ text-align:center }
+
+.tdPadding tr td{padding:2px;}
+
+/*左视图的标题*/
+.leftTitle{border-radius: 5px 5px 5px 5px; width:95%; margin:0px auto 0px auto; background-image:url(/images/black/g.png); line-height:27px; text-align:left; padding-left:4px; font-weight:bold; color:#eee; font-family:黑体; font-size:18px; height:27px;background-color:transparent;}
+
+/*外部面板*/
+.MarginPanel{font-size:12px; width:100%; min-width:800px; overflow:hidden; background-image:url(/images/white/g.png);  border-radius: 5px 5px 5px 5px; padding-bottom:10px;
+             _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src='/images/white/g.png'); /* IE6 */ _background-image:none;
+              }
+/*今日盈亏*/
+#TodayWinPoint
+{
+      color: #DF1717;
+      font-weight: bold;
+}
+
+/*时间*/
+#Lefttimer10
+{
+    color: #DF1717;
+    font-weight: bold;
+}
+
+/*头部*/
+#lblHead
+{
+    color: #413DD7;
+    font-weight: bold;
+}
+
+/*主面板*/
+.BetMainPanel{ width:auto; margin-top:10px;}
+.BetMainPanel .Ebutton{border-radius: 10px 10px 10px 10px; margin-left:10px; font-size:18px; font-weight:bold; font-family:微软雅黑; border:1px solid #454545 ; height:31px; line-height:31px}
+.betInline{ list-style:none; overflow:hidden}
+.betInline .Ebutton{ margin-left:10px; font-size:14px; font-weight:bold; font-family:微软雅黑; border:1px solid #454545 ; height:24px; line-height:22px; display:inline-block; float:left}
+
+
+/*控制面板*/
+.controlPanel{  margin-bottom:0px; border-radius: 5px 5px 0px 0px; width:100%;height:68px; overflow:hidden; display:inline-block; background-image:url(/images/NewCustomerImages/controlPanelBack.png) ;
+             _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src='/images/NewCustomerImages/controlPanelBack.png'); /* IE6 */ _background-image:none;
+               }
+.controlPanel .roundInfomation{ height:30px; display:block; text-align:left; line-height:28px; padding-right:3px; padding-left:3px }
+.controlPanel .roundInfomation .CRleft{ float:left; color:#565656; display:inline-block; overflow:hidden; }
+.controlPanel .roundInfomation .CRleft span{ margin-left:10px }
+
+.controlPanel .roundInfomation .CRright{ float:right; margin-left:10px; height:30px; line-height:28px;  color:#535353; display:inline-block; overflow:hidden; }
+.controlPanel .roundInfomation .CRright .crrtitle{  color:#565656;float:left;  display:inline-block }
+.controlPanel .roundInfomation .CRright #TableBall{ float:left;  display:inline-block}
+.controlPanel .importent{ font-weight:bold }
+.balltxt{ color:#fff; font-size:12px; }
+
+.textBlue{ color:#2032b7;font-family:Arial Black; }
+.textRed{ color:#d51313;font-family:Arial Black; }
+.textBold{font-weight:bold}
+
+
+.controlPanel .Betinformation{_position:relative; height:28px; display:block; text-align:left; line-height:28px; padding-right:3px; padding-left:3px }
+.controlPanel .Betinformation .CBleft{float:left; color:#535353; display:inline-block; overflow:hidden; }
+.controlPanel .Betinformation .CBleft span{margin-left:10px; float:left;display:inline-block;}
+.controlPanel .Betinformation .CBleft .tboxskin{background-image:url(/images/newimages/right/textShader.png); background-repeat:repeat-x; background-position:top; background-color:#fff; border:1px solid #454545; overflow:hidden; margin-top:3px; height:22px; float:left; display:inline-block;width:80px }
+.controlPanel .Betinformation .CBleft input[type=text]{ height:24px; line-height:24px; width:80px; font-size:14px; font-weight:bold; background-image:none; background-color:transparent; border:0px; margin:0px}
+.controlPanel .Betinformation .CBleft input[type=radio]{ display:none; float:left;}
+.controlPanel .Betinformation .CBleft input{display:expression(this.type=="radio"?'none':'')   }
+.controlPanel .Betinformation .CBleft .Ebutton{float:left;  display:inline-block; margin-left:5px; height:24px; margin-top:3px; line-height:24px; color:#535353; font-weight:bold; font-size:12px; }
+
+.controlPanel .Betinformation .CBright{float:right; color:#535353; display:inline-block; overflow:hidden;}
+.controlPanel .Betinformation .CBright A{float:left;  display:inline-block; overflow:hidden; margin-top:7px}
+.controlPanel .Betinformation .CBright .Ebutton{display:inline-block; background-color:#343434; border:2px solid #343434; color:#eee; font-size:12px; cursor:pointer; height:18px; line-height:18px; padding: 0px 8px 0px 8px; background-image:none}
+
+
+.unSelectBtn{display:inline-block; background-color:#343434; border:2px solid #343434; color:#eee; font-size:12px; cursor:pointer; height:18px; line-height:18px; padding: 0px 8px 0px 8px; background-image:none}
+.unSelectBtn:active{color:#eee; text-shadow:0px 0px 5px #fff;box-shadow:0px 0px 5px #000 inset;}
+.SelectBtn{display:inline-block; background-color:#AAAAAA; border:2px solid #343434; color:#343434; font-size:12px; cursor:pointer; height:18px; line-height:18px; padding: 0px 8px 0px 8px;}
+.cntSelectBtn{cursor:not-allowed; display:inline-block; background-color:#343434; border:2px solid #343434; color:#a0a3a3; font-size:12px; height:18px; line-height:18px; padding: 0px 8px 0px 8px;}
+
+.SbutGlup{ white-space:nowrap ; width:100%; margin:2px 0px 2px 0px; text-align:center;border-right:2px solid #343434;}
+/*以下为没有选中的状态*/
+.SbutGlup .unSelectBtn{ display: table-cell; float:none; border-right:0px; background-color:#4f5050}
+/*以下为选中的状态*/
+.SbutGlup .SelectBtn{ display: table-cell; float:none; border-right:0px;  }
+/*以下为不可选中的状态*/
+.SbutGlup .cntSelectBtn{ display: table-cell; float:none; border-right:0px;background-color:#4f5050}
+.SbutGlup .RedAlt{ color:#AAAAAA; font-family:Arial Black }
+.SbutGlup .SelectBtn .RedAlt{color:#000;}
+
+.customRadio{border-radius: 5px 5px 5px 5px; background-color:#343434; font-weight:normal; border:2px solid #343434; color:#eee; text-align:center;width:34px;   margin-top:3px; margin-left:5px; cursor:pointer;  height:20px; line-height:20px;  font-size:12px;  display:inline-block; float:left;-webkit-transition:all .2s linear;transition:all .2s linear;  }
+.customRadio_in{border-radius: 5px 5px 5px 5px;   background-color:#AAAAAA; color:#313131; border:2px solid #343434;  text-align:center; width:34px;  margin-top:3px; margin-left:5px; cursor:pointer; height:20px; line-height:20px;  font-size:12px;  display:inline-block; float:left;-webkit-transition:all .2s linear;transition:all .2s linear; }
+
+#btnFast{ margin-left:1px }
+
+.layerOT{ z-index:10;position:absolute; text-align:center; width:100% }
+.layerOT .openTimeStyle{margin:0px auto 0px auto; width:198px; white-space:nowrap; text-shadow:0px 0px 5px #000; color:#eee; border-radius: 0px 0px 5px 5px; line-height:18px;  padding:2px 5px 2px 5px;font-size:12px; overflow:hidden;background-image:url(/images/Black/g.png);
+             _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src='/images/Black/g.png'); /* IE6 */ _background-image:none;                        
+                        }
+
+#ballGrev .Ebutton{ float:left; margin-left:1px; margin-bottom:1px; font-size:16px; font-family:Arial; white-space:nowrap}
+
+.tableHeightLow tr{ height:22px }
+.tableHeightLow .contentTD{ height:22px }
+.tableHeightLow .contentTD .text_input{ height:16px }
+.textDelete{color:#FF0000;text-decoration:line-through; }
+
+
+.style1 { width: 560px; }
+.style2 { width: 132px; }

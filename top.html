@@ -1,0 +1,106 @@
+<html style="background-color: rgb(75, 198, 227);"><head>
+    <title>会员</title>
+    <link href="StyleCss/Global.css" rel="stylesheet" type="text/css">
+    <link href="StyleCss/top.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" language="javascript" src="script/jquery-1.11.3.min.js"></script>
+    <script src="script/login.js" type="text/javascript"></script>
+</head>
+<body style="background-color: rgb(75, 198, 227);">
+    <div id="soundContent"><audio src="/sound/openRace.mp3" controls="controls" id="soundPlayer"></audio></div>
+    <!--颜色选择菜单-->
+    <ul class="colorList">
+        <li onclick="topObj.SetSkinColor(this)" style="background-color: #4bc6e3"></li>
+        <li onclick="topObj.SetSkinColor(this)" style="background-color: #f1bdbd"></li>
+        <li onclick="topObj.SetSkinColor(this)" style="background-color: #8bce96"></li>
+        <li onclick="topObj.SetSkinColor(this)" style="background-color: #d2c67e"></li>
+        <li onclick="topObj.SetSkinColor(this)" style="background-color: #b0dbe4"></li>
+        <li onclick="topObj.SetSkinColor(this)" style="background-color: #cacaca"></li>
+        <li onclick="topObj.SetSkinColor(this)" style="background-color: #278cdc"></li>
+    </ul>
+    <!--颜色选择菜单-->
+    <!--TOP主菜单-->
+    <div class="top">
+        <div class="Logo" id="webSiteName">D345</div>
+        <div class="content">
+            <!--富菜单-->
+            <table class="richMenu" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                    <td style="width:206px">
+                        &nbsp;
+                    </td>
+                    <td id="HKGame_bigMenu2">
+                        <div class="menu" id="smallMenu">
+                            <a id="BetDetail" href="BetDetail.aspx" target="MainFrame" onclick="return ref(this);" style="margin: 0px 1px 0px 0px; color: black;">下注明细</a> 
+                            <a id="BetHisTermIndex3" href="BetHisTermIndex3.aspx" target="MainFrame" onclick="return ref(this);" style="margin: 0px 1px 0px 0px; color: blue;">期报</a>
+                            <a id="BetHis" href="BetHisIndex.aspx" target="MainFrame" onclick="return ref(this);" style="margin: 0px 1px 0px 0px; color: black;">历史账单</a>
+                            <a id="MemberInfo" href="MemberInfo.aspx" onclick="topObj.SwitchBigMenu2(this);" target="MainFrame" style="margin: 0px 1px 0px 0px; color: black;">会员资料</a>
+                            <a id="LotRet" href="LotRet.aspx" onclick="topObj.SwitchBigMenu2(this);" target="MainFrame" style="margin: 0px 1px 0px 0px; color: black;">开奖号码</a> 
+                            <a id="rule" href="rule.htm" onclick="topObj.SwitchBigMenu2(this);" target="MainFrame" style="margin: 0px 1px 0px 0px; color: black;">规则说明</a>  
+                            <a id="Log" href="Log.aspx" onclick="topObj.SwitchBigMenu2(this);" target="MainFrame" style="color: black;">日志</a>
+                            <a id="UpdatePwd" href="PassWordChange.aspx?Type=disabled" onclick="topObj.SwitchBigMenu2(this);" style="margin-left: 1px; color: black;" target="MainFrame">密码设定</a>
+                            <a id="btnOut" target="_top" style="margin-left: 1px; color: black;">退出</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+            <!--富菜单-->
+            <!--跑马灯-->
+            <table class="menuAndRollLight" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                    <td style="width:206px">
+                        &nbsp;
+                    </td>
+                    <td>
+                        <div class="rollLight" id="PHrls" onclick="topObj.HisClick(this)" style="width: 567px;">
+                            <div class="rollLight_inside" id="Hrls" style="left: 123px;">欢迎您的大驾光临！谢谢您一直以来对本公司的支持！您的满意是我们永远的追求！			</div>
+                        </div>
+                    </td>
+                    <td style="width:250px;" id="tdTime">离停盘还有:4分钟20秒</td>
+                </tr>
+            </tbody></table>
+            <!--跑马灯-->
+            <!--主菜单-->
+            <table border="0" cellpadding="0" cellspacing="0" class="mainMenu">
+                <tbody><tr>
+                    <td style="width:206px">
+                        &nbsp;
+                    </td>
+                    <td class="menuLeft">
+                    </td>
+                    <td class="menuContent" id="HKGame_bigMenu">
+                        <a id="EZD" href="EZD.aspx" target="MainFrame" onclick="topObj.SwitchBigMenu(this);"> 二定位</a>
+                         <a id="KDBet" href="KDIndex.htm" target="MainFrame" class="curDiv" onclick="topObj.SwitchBigMenu(this);">快打</a>
+                         <a id="KXBet" href="KXIndex.htm" target="MainFrame" onclick="topObj.SwitchBigMenu(this);">快选</a>
+                         <a id="A2" href="weixinImport.aspx" target="MainFrame" onclick="topObj.SwitchBigMenu(this);">快译</a>
+                         <a id="PL" href="PL_SIDW.aspx" target="MainFrame" onclick="topObj.SwitchBigMenu(this);">赔率变动表</a>
+                         <a id="A1" href="txtImport.aspx" target="MainFrame" onclick="topObj.SwitchBigMenu(this);">txt导入</a>
+                         <a id="betResultBtn" onclick="top.openRWindow();">033期-2&nbsp;0&nbsp;4&nbsp;4&nbsp;5</a>
+                    </td>
+                </tr>
+            </tbody></table>
+            <!--主菜单-->
+        </div>
+    </div>
+    <!--TOP主菜单-->
+
+<script>
+    var webSiteName = 'D345';
+    var topCount = '1';
+    var OpenDishDate = '2018/05/30 11:29:00'; //关盘时间
+    var SysDateTime = '2018/05/30 11:23:04'; //现在时间
+    var DateNow = new Date(SysDateTime);
+    var hlsMsg = '1#欢迎您的大驾光临！谢谢您一直以来对本公司的支持！您的满意是我们永远的追求！#2017/12/19 17:24:07'
+    var stateFlg = '3'
+    window.onload = function () {
+//        if (topCount != '1') {
+//            top.location = 'Default.aspx';
+//        }
+        OnLoadInit();
+
+        setInterval(function () { GetDate() }, 1000);
+
+    }
+
+</script>
+
+</body></html>

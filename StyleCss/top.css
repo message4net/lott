@@ -1,0 +1,90 @@
+body,html { overflow:hidden; background-image:none; background-color:#4BC6E3;  background-position:left; background-repeat:no-repeat; overflow-x:auto; color:#eee; height:100%; -webkit-transition:background 1s linear;transition:background 1s linear;}
+
+/*头部第一块*/
+.topOne{ background-image:url(/images/NewCustomerImages/LayerOne.png); width:auto; overflow:hidden; height:20px; line-height:20px;
+         _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src='/images/NewCustomerImages/LayerOne.png'); /* IE6 */ _background-image:none;         
+         }
+
+/*头部第一块*/
+.colorList{overflow:hidden;  list-style:none; float:left; position:absolute;z-index:999;right:9px;bottom:19px}
+.colorList li{ float:left; overflow:hidden; width:16px; height:16px; border:1px solid #fff; margin-top:1px; margin-left:1px  }
+
+/*头部主内容*/
+.top{ height:86px; overflow:hidden;   width:auto; 
+      }
+
+/*logo*/
+.Logo{ width:206px;  height:86px; line-height:86px; font-size:50px; text-align:center; font-family:黑体; font-weight:bold;text-shadow:0px 0px 5px #000; float:left; display:inline-block   }
+.top .content{width:100%; height:96px;  overflow:hidden;position:absolute; left:0px}
+
+/*主菜单*/
+.top .content .mainMenu{ overflow:hidden; margin:2px 0px 2px 0px; width:100%}
+.top .content .mainMenu .menuLeft{background-image:url(/images/NewCustomerImages/MainMenuLeftSide.png); width:6px; height:37px;
+                                    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/NewCustomerImages/MainMenuLeftSide.png'); /* IE6 */ _background-image:none;
+                                  }
+.top .content .mainMenu .menuContent{background-image:url(/images/NewCustomerImages/MainMenuContent.png);  height:37px; line-height:37px; overflow:hidden;
+                                    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src='/images/NewCustomerImages/MainMenuContent.png'); /* IE6 */ _background-image:none;
+                                     }  
+.top .content .menuContent a{ float:left; display:inline-block; overflow:hidden; padding:0px 10px 0px 10px; color:#eee; font-size:14px; font-family:幼圆; font-weight:bold;text-shadow:0px 0px 5px #000; }
+
+.top .content .menuContent .curDiv{ font-size:18px; font-family:黑体; color:#cfff00;
+                                    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src='/images/Black/g.png'); /* IE6 */ _background-image:none;                                    
+                                    }
+                                    
+
+/*副菜单*/ 
+.richMenu { height:30px; width:100% ; margin-top:1px; font-size:12px; border-right:93px}
+.richMenu td{overflow:hidden}
+.richMenu .menu{overflow:hidden;color:#eee;width: 783px; }
+.richMenu .menu a{cursor:pointer; width:70px; height:28px; font-size:16px; font-family:宋体; padding:0px 2px 0px 2px; line-height:28px; text-align:center;  float:left; display:inline-block; font-weight:bold; background-image:url(/img/bg_menu2.gif);color:#454545;border: 1px solid #fff;
+                               }
+.richMenu .selected{background-color:#454545 }
+.richMenu a.exitButton{background-image:url(/img/bg_menu2.gif); width:80px;height:28px !important;line-height:28px; height:18px; font-weight:bold; float:right; color:#454545;text-shadow:0px 0px 0px #000;}
+
+/*跑马灯*/
+.top .menuAndRollLight{ height:22px; width:auto ; margin-top:1px; font-size:12px; border-right:93px}
+.top .menuAndRollLight td{overflow:hidden}
+.top .menuAndRollLight .menu a:hover{  background-image:url(/images/orange/g.png); }
+.top .menuAndRollLight .rollLight{margin-right:16px;  position:relative; text-align:left;color:#000; height:22px; overflow:hidden;white-space:nowrap; line-height:22px; font-size:12px; 
+                                    }
+.top .menuAndRollLight .rollLight .rollLight_inside{ position:relative; left:0px; height:25px;cursor:pointer;float:left;color:#fff; }
+
+
+/*颜色选择*/
+.top .menuAndRollLight .colorPanel{height:41px;border:1px solid #fff; width:41px; overflow:hidden;float:right;}
+.top .menuAndRollLight .colorPanel div{ height:7px;border-bottom:1px solid #fff; overflow:hidden; display:block; cursor:pointer}
+
+/*退出按钮*/
+.top .menuAndRollLight .exitButton{height:43px;width:43px;margin:0px 3px 0px 3px; background-color:#ED9700; text-align:center; overflow:hidden;}
+.top .menuAndRollLight .exitButton a{color:#2b2b2b; margin-top:5px;display:block; font-size:14px; font-family:微软雅黑 }
+.top .menuAndRollLight .exitButton a:hover{ color:#000; font-weight:bold }
+#tdTime{color:#454545;font-weight:bold}
+
+
+/*头部第三块*/
+.top .topThree{width:auto; overflow:hidden; }
+.top .topThree .mainMenu{ overflow:hidden;  list-style:none; float:left; display:inline-block}
+.top .topThree .mainMenu li{ float:left; display:inline-block; background-image:url(/images/NewAdminImages/LayerThree_menu_center.png);height:32px; line-height:32px; overflow:hidden ;
+              _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src='/images/NewAdminImages/LayerThree_menu_center.png'); /* IE6 */ _background-image:none;                             
+                             }
+.top .topThree .mainMenu li a{ height:32px; padding:0px 10px 0px 10px; overflow:hidden;text-shadow:0px 0px 5px #000; }
+.top .topThree .mainMenu .leftSide{background-image:url(/images/NewAdminImages/LayerThree_menu_Left.png); width:7px;
+              _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src='/images/NewAdminImages/LayerThree_menu_Left.png'); /* IE6 */ _background-image:none;                                                                
+                                    }
+.top .topThree .mainMenu .rightSide{background-image:url(/images/NewAdminImages/LayerThree_menu_right.png); width:8px ;
+              _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src='/images/NewAdminImages/LayerThree_menu_right.png'); /* IE6 */ _background-image:none;                                                                
+                                    
+                                    }
+/*颜色选择*/
+.top .topThree .chooseColor{ width:auto ;overflow:hidden;height:32px;background-image:url(/images/NewAdminImages/LayerThree.png);
+              _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src='/images/NewAdminImages/LayerThree.png'); /* IE6 */ _background-image:none;                                                                
+                             
+                             }
+.top .topThree .chooseColor .colorPanel{overflow:hidden;  list-style:none; float:right; margin:0px 3px 0px 0px}
+.top .topThree .chooseColor .colorPanel li{ width:12px; height:12px; border:1px solid #eee; float:left; margin-right:3px; margin-top:8px; cursor:pointer}
+
+#soundContent{display:none}
+a#betResultBtn{
+  font-size: 16px;
+  color:#cfff00;
+}

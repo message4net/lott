@@ -1,0 +1,2 @@
+body,html { background-color:#4BC6E3;  background-repeat:repeat-x; height:100%; overflow-y:auto; -webkit-transition:background 1s linear;transition:background 1s linear;}
+.leftShawer{  width:5px; height:500px; position:absolute; top:0px; left:0px; z-index:1000}

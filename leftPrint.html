@@ -1,0 +1,87 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+<title>
+
+</title><link href="style/members.css" rel="stylesheet" type="text/css">
+    <script src="Scripts/Zebra_Dialog/public/jquery-1.6.2.js" type="text/javascript"></script>
+    <script src="Scripts/leftPrint20160526.js" type="text/javascript"></script>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">   
+</head>
+<body style="background-color:#4bc6e3">
+    <form method="post" action="./leftPrint.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTExMTM2OTE3ODkPFgIeB1N5c1Rlcm0FCzIwMTgwNTMwMDM0ZGQ2lVE+vVXzw0QU1n7ZFmkm878H5tuoBegzRJTDHWiFrQ==">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E465D44C">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAASZUnZi7z27i5HKzQR259DZ/v9gIg3JOTO7998bCAmOT3f9iLl/70sQbdqh9nzTHth13HaNCmKPXwtSIMJvlpwqS8HPBoXOPiJphIaeXG2b/X2KOv7L5Blelh9RIymyEf4=">
+</div>
+<input name="hidBetLeftList" type="hidden" id="hidBetLeftList">
+<input name="hidBetLeftList2" type="hidden" id="hidBetLeftList2" value="as559###20180530033">
+<input onclick="__doPostBack('btnClear','')" name="btnClear" type="button" id="btnClear" style="display:none" value="提交">
+	<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+    <tr>
+    <td align="center">
+        <div id="showorderhtml">
+            <table width="100%" border="0" style="padding:1px 1px 1px 0px;background: #FFFFFF;border:0px solid #4b9ecc;font-size:12px" cellpadding="0" cellspacing="0" align="left">
+            <tbody><tr>
+                <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody>
+                    <tr><td style="text-align:right;font-size:15px;">单位：元</td>
+                    </tr></tbody>
+                    </table>
+                    <table align="center" width="100%" cellpadding="0" cellspacing="0" class="tablebprint4" style="margin-bottom: 2px !important;">  
+                        <tbody><tr><td colspan="3" class="print2" style="text-align:center;color:red;"><b>重庆时时彩</b></td></tr>  
+                        <tr><td colspan="3" class="print3" id="tdTitle">时间:<br>会员:<br>编号:</td></tr>  
+                        <tr class="print2">
+                            <td style="text-align:center;width: 32%;white-space: nowrap;font-weight:bold">号码</td>
+                            <td style="text-align:center;font-weight:bold">赔率</td>
+                            <td style="text-align:center;font-weight:bold">金额</td>    
+                        </tr>
+                    </tbody><tbody id="tbHtml"></tbody>
+                        <tbody><tr class="print5">    <td colspan="3" id="tdCount">笔数0 总金额0</td>  </tr> 
+                        <tr><td colspan="3" id="pageSelecterContainer"></td></tr>
+                         <tr>    
+                         <td align="center" style="text-align:center;" class="Noprint" colspan="3">         
+                             <input class="Noprint" type="button" value="清 空" style="height:20;width:60" onclick="fn_clear();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                             <input class="Noprint" name="numprint" id="numprint" type="button" value="打 印" style="height:20;width:60" onclick="dataCenter.printData();">
+                         </td>     
+                         </tr>
+                    </tbody></table>
+                    <span style="font-size:15px;">第<span id="term">20180530033</span>期,3天內有效!</span>	
+                </td>
+            </tr>
+            <tr></tr></tbody></table> 
+        </div>
+    </td></tr></tbody>
+    </table>
+    </form>
+    <script type="text/javascript" language="javascript">
+        $("#term").html("20180530034");
+        var PRINT_FLG = 0  ;
+        fn_CreateData();
+    </script>
+
+
+</body></html>
